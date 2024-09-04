@@ -16,4 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('product/{code}', [ProductController::class, 'getAProduct']);
+Route::get('product', [ProductController::class, 'getAProduct']);
+Route::post('set-price', [ProductController::class, 'setProductPrice']);
+//Route::prefix('mail/')->group(function() {
+//    Route::post('welcome', \App\Http\Controllers\MailController::class, 'sendWelcomeEmail');
+//});
